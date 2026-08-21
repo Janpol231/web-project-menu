@@ -1,0 +1,102 @@
+/* Configuración general */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f1e8;
+  color: #333;
+}
+
+/* Encabezado */
+
+header {
+  text-align: center;
+  background-color: #2f3e2f;
+  color: white;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* Contenedor principal */
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Secciones del menú */
+
+.menu-section {
+  margin-bottom: 40px;
+}
+
+.menu-section h2 {
+  font-size: 28px;
+  color: #2f3e2f;
+  border-bottom: 2px solid #2f3e2f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Cada plato */
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.menu-item p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.menu-item span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #2f3e2f;
+  white-space: nowrap;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-item span {
+    align-self: flex-end;
+  }
+}
