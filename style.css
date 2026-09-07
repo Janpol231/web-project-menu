@@ -14,11 +14,21 @@ body {
 
 /* Encabezado */
 
-header {
+.header {
+  position: relative;
   text-align: center;
   background-color: #2f3e2f;
   color: white;
   padding: 40px 20px;
+}
+
+.image-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 210px;
+  height: auto;
 }
 
 header h1 {
@@ -79,9 +89,18 @@ main {
 
 .menu-item span {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 19px;
   color: #2f3e2f;
   white-space: nowrap;
+}
+
+.imagen-plato {
+  width: 210px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: block;
 }
 
 /* Responsive */
@@ -98,5 +117,26 @@ main {
 
   .menu-item span {
     align-self: flex-end;
+  }
+}
+
+/*mobile*/
+
+@media (max-width: 480px) {
+  .image-logo {
+    display: none;
+  }
+  .menu-item {
+    position: relative;
+  }
+  .menu-item span {
+    position: absolute;
+  }
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap; /* clave: si no caben, el precio baja de línea en vez de superponerse */
+    gap: 4px 10px;
   }
 }
